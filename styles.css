@@ -102,6 +102,23 @@ nav {
 
 }
 
+.search{
+    width: 100%;
+}
+
+#search{
+    font-size: 16px;
+    height: 40px;
+    width: 90%;
+    padding: 7px;
+    margin: 5px 0;
+}
+
+.btnsearch{
+    height: 40px;
+    width: 9%;
+}
+
 #product,
 #valueProd {
     width: 60%;
@@ -204,6 +221,15 @@ tr:hover {
 }
 
 @media(max-width:705px){
+    .search{
+        flex-wrap: wrap;
+    }
+
+    #search{
+        width: 50%;
+        margin-left: 20%;
+    }
+
     .form{
         flex-wrap: wrap;
     }
