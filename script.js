@@ -80,7 +80,7 @@ btnSalvar.onclick = e => {
     // verifica se o campo tem um index , se nao tiver ele adiciona novos dados no final do array , atraves do PUSH
     let teste = confirm('Deseja adicionar este produto?')
     if (teste == true) {
-        if (id > 0) {
+        if (id >= 0) {
             itens[id].product = product.value
             itens[id].valueProd = valueProd.value
             clearFields()

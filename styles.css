@@ -224,7 +224,6 @@ tr:hover {
     .search{
         flex-wrap: wrap;
     }
-
     #search{
         width: 50%;
         margin-left: 20%;
@@ -245,4 +244,11 @@ tr:hover {
     .texto{
         font-size: 40px;
     }
+}
+
+@media (max-width: 1000px) {
+    td,th{
+        text-align: center;
+    }
+    
 }
