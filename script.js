@@ -84,7 +84,7 @@ btnSalvar.onclick = e => {
             itens[id].product = product.value
             itens[id].valueProd = valueProd.value
             clearFields()
-        } else{
+        } else {
             itens.push({ 'product': product.value, 'valueProd': valueProd.value })
 
         }
@@ -107,6 +107,11 @@ function loadItens() {
         createItem(item, index)
     })
 }
+
+
 loadItens()
+
+var filtro = itens;
+console.log(filtro)
 
 

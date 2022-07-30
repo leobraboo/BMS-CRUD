@@ -52,7 +52,8 @@ nav {
 .container-body {
     display: flex;
     width: 100%;
-    max-width: 1120px;
+    /* max-width: 1120px; */
+    background: rgba(0, 0, 0, 0.61);
     height: 100vh;
     margin: 0 auto;
     display: flex;
@@ -91,7 +92,8 @@ nav {
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
-    text-shadow: -0.1em 0em #939297ec;
+    font-size: 50px;
+    text-shadow: -0.1em 0em #afafadec;
 }
 
 .container2 {
@@ -166,12 +168,11 @@ tr:hover {
     color: black;
     justify-content: center;
     height: 20px;
-    margin-left: 25px;
     width: 40px;
 }
 
 .exclude {
-    margin-left: 25px;
+
     border: none;
     border-radius: 3px;
     color: black;
@@ -202,7 +203,7 @@ tr:hover {
 
 }
 
-@media(max-width:540px){
+@media(max-width:705px){
     .form{
         flex-wrap: wrap;
     }
@@ -214,5 +215,8 @@ tr:hover {
         display: flex;
 
         margin-left: 30% ;
+    }
+    .texto{
+        font-size: 40px;
     }
 }
