@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>CRUD BMS</title>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div>
+                <h1>Teste BMS</h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Inicio </a></li>
+                    <li><a href="#">Opções </a></li>
+                    <li><a href="#">Relatório</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <div class="container-body">
+        <div class="container1">
+            <h1 class="texto">Cadastro Produtos <br> </h1>
+            <div>
+                <div class="form">
+
+                    <input type="text" placeholder="Nome Produto" id="product" >
+                    <input type="number"  placeholder="Valor" id="valueProd" >
+
+                </div>
+                <button id="btnSalvar">Adicionar</button>
+                <table>
+                    <thead>
+                        <tr style="margin-right: 10px;">
+                            <th>Nome Produto</th>
+                            <th>Valor Produto</th>
+                            <th>Editar</th>
+                            <th>Excluir</th>
+                        </tr>
+                    <tbody id="teste">
+
+                    </tbody>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
