@@ -129,7 +129,7 @@ document.getElementById('search').addEventListener('keyup' , function(){
         var td = tr.childNodes;
 
         for (var j = 0 ; j < td.length; j++){
-            var value = td[j].parentNode;
+            var value = td[j].parentNode.textContent;
             console.log(value) 
 
             if (value.indexOf(buscar) >=0){
