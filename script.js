@@ -115,29 +115,35 @@ function loadItens() {
 
 loadItens()
 
-// var filtro = itens;
-// console.log(itens)
-
+// area de pesquisa
+// no input search foi adicionado o evento onde ouve o teclado e dispara a função assim que uma tecla é pressionada
+// toda a pesquisa é baseado em nós do html atraves do childnodes
 document.getElementById('search').addEventListener('keyup' , function(){
+// todo o conteudo de buscar é revertido para lowercase , letras minusculas , facilitando a busca
     var buscar = document.getElementById("search").value.toLowerCase();
-
+// i e j sao variaveis para a leitura do conteudo , adicionando um index, para facilitar as condiçoes 
     for (var i = 0 ; i < tbody.childNodes.length; i++){
+
+// var fine recebe false assim que starta e função , depois inicia as condições para atribuir o valor true caso a pesquisa retorne algo
         var fine = false;
+// armazenado todos os elementos de tbody na variavel tr
         var tr = tbody.childNodes[i];
-        
 
+// assim é adicionado os nos de tr na variavel td
         var td = tr.childNodes;
-
+// a variavel j é criada para auxiliar na varredura no conteudo de value 
+// onde é feita a pesquisa baseado no que é retornado pelo childnodes
+//  atraves de teste de retorno foi possivel identificar onde estava o elemento que irei usar como base de pesquisa , que é o conteudo do texto do campo de td
+// feito analise no DOM
         for (var j = 0 ; j < td.length; j++){
             var value = td[j].parentNode.textContent;
-            console.log(value) 
 
             if (value.indexOf(buscar) >=0){
                 fine = true;
             }
         }
 
-
+// condição criada para ocultar a linha que não tem os elementos da pesquisa
         if (fine){
             tr.style.display = "table-row"
         }else {
