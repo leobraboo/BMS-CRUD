@@ -102,14 +102,11 @@ nav {
 
 }
 
-.search{
-    width: 100%;
-}
 
 #search{
     font-size: 16px;
     height: 40px;
-    width: 90%;
+    width: 100%;
     padding: 7px;
     margin: 5px 0;
 }

@@ -3,8 +3,9 @@
 // foi usado a tag # para buscar pelo ID do html
 const tbody = document.querySelector('tbody')
 const product = document.querySelector('#product')
-const valueProd = document.querySelector('#valueProd')
+const valueProd = document.querySelector('#valueProd') 
 const saveProd = document.querySelector('#btnSalvar')
+
 
 // variaveis para manipular os valores no localStorage
 
@@ -14,6 +15,7 @@ var itens, id
 // conversao
 const getItens = () => JSON.parse(localStorage.getItem('dbprod')) ?? []
 const setItens = () => localStorage.setItem('dbprod', JSON.stringify(itens))
+
 // UPDATE ou  EDIÇÃO , ONDE EU VOU INSERIR DADOS EM UMA TABELA
 
 function createItem(item, index) {
@@ -21,9 +23,9 @@ function createItem(item, index) {
     var tr = document.createElement('tr')
     // Nesse caso foi usado o innerHTML  ,  onde ele cria uma linha na tabela usando as variaveis inseridas no input
     // é usado a crase para concatenar o html com javascript
-    tr.innerHTML = `
+    tr.innerHTML =  `
     <td>${item.product}</td>
-    <td>R$ ${item.valueProd}</td>
+    <td>R$ ${item.valueProd } </td>
     <td>
         <button class ='edit' onclick='updateItem(${index})' > <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
         <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
@@ -88,12 +90,14 @@ btnSalvar.onclick = e => {
             itens.push({ 'product': product.value, 'valueProd': valueProd.value })
 
         }
+        
         setItens()
         clearFields()
         loadItens()
     } else {
         clearFields()
     }
+
 
 }
 
@@ -111,7 +115,33 @@ function loadItens() {
 
 loadItens()
 
-var filtro = itens;
-console.log(filtro)
+// var filtro = itens;
+// console.log(itens)
+
+document.getElementById('search').addEventListener('keyup' , function(){
+    var buscar = document.getElementById("search").value.toLowerCase();
+
+    for (var i = 0 ; i < tbody.childNodes.length; i++){
+        var fine = false;
+        var tr = tbody.childNodes[i];
+        
+
+        var td = tr.childNodes;
+
+        for (var j = 0 ; j < td.length; j++){
+            var value = td[j].parentNode;
+            console.log(value) 
+
+            if (value.indexOf(buscar) >=0){
+                fine = true;
+            }
+        }
 
 
+        if (fine){
+            tr.style.display = "table-row"
+        }else {
+            tr.style.display = "none";
+        }
+    }
+})
