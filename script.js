@@ -76,7 +76,6 @@ btnSalvar.onclick = e => {
     if (product.value == '', valueProd.value == '') {
         return
     }
-    document.getElementById('btnSalvar').addEventListener('click', e);
     e.preventDefault();
 
     // verifica se o campo tem um index , se nao tiver ele adiciona novos dados no final do array , atraves do PUSH
@@ -135,9 +134,9 @@ document.getElementById('search').addEventListener('keyup' , function(){
 // onde é feita a pesquisa baseado no que é retornado pelo childnodes
 //  atraves de teste de retorno foi possivel identificar onde estava o elemento que irei usar como base de pesquisa , que é o conteudo do texto do campo de td
 // feito analise no DOM
+ 
         for (var j = 0 ; j < td.length; j++){
             var value = td[j].parentNode.textContent;
-
             if (value.indexOf(buscar) >=0){
                 fine = true;
             }
@@ -151,3 +150,11 @@ document.getElementById('search').addEventListener('keyup' , function(){
         }
     }
 })
+
+
+const roin = document.getElementById('roin').addEventListener('click' , tesao)
+
+function tesao (){
+    window.print();
+
+}

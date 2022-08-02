@@ -43,6 +43,22 @@ nav {
     transition: 0.2s;
 }
 
+#roin{
+    background-color: #111111;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    border: none;
+    text-decoration: none;
+    border-bottom: 1px solid #ffee011f;
+    transition: 0.2s;
+}
+
+#roin:hover{
+    border-bottom: 2px solid #ffee0193;
+    color: rgb(247, 230, 0);
+    font-size: 18px;
+}
+
 .menu ul li a:hover {
     border-bottom: 2px solid #ffee0193;
     color: rgb(247, 230, 0);
@@ -68,7 +84,7 @@ nav {
     border-radius: 30px;
     margin: 20px;
     padding: 50px;
-    width: 60%;
+    width: 60vw;
 
 
 }
