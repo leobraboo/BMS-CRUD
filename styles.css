@@ -14,6 +14,7 @@ nav {
 .container {
     color: rgb(255, 255, 255);
     display: flex;
+    max-height: 100vh;
     justify-content: space-around;
     width: 100%;
     max-width: 1120px;
@@ -69,24 +70,25 @@ nav {
     display: flex;
     width: 100%;
     /* max-width: 1120px; */
-    background: rgba(0, 0, 0, 0.61);
-    height: 100vh;
+    height: 88vh;
     margin: 0 auto;
     display: flex;
     justify-content: center;
 }
 
 .container1 {
-    max-height: 300vh;
-    background: rgb(241, 239, 239);
+    max-height: 80vh;
+    background: rgb(161, 159, 159);
     box-sizing: border-box;
-    box-shadow: 0 1px 2px rgb(123, 126, 141);
+    box-shadow: 0 1px 2px rgb(11, 11, 11);
     border-radius: 30px;
     margin: 20px;
     padding: 50px;
     width: 60vw;
-
-
+}
+.container1 input {
+    border-radius: 10px;
+    border: none;
 }
 
 @media(min-width:350px) and (max-width:800px) {
@@ -168,6 +170,7 @@ nav {
     transition: 0.5s;
     height: 45px;
 
+
 }
 
 
@@ -176,6 +179,8 @@ table {
     border-collapse: collapse;
     width: 100%;
     height: auto;
+    margin-top: 30px;
+    border-radius: 10px;
 
 }
 
